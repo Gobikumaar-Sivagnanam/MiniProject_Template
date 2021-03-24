@@ -1,10 +1,15 @@
 PROJ_NAME = parse_csv
+TEST_PROJ_NAME = test_$(PROJ_NAME)
 
 BUILD_DIR = build
 
+TEST_SRC = test/test_parse_csv.c\
+unity/unity.c
+
 SRC = src/info.c
 
-INC = -Iinc
+INC = -Iinc\
+-Iunity
 
 #To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
 ifdef OS
